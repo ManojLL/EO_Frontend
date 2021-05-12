@@ -1,19 +1,34 @@
 import React from 'react'
-import { Router, Route, Switch } from "react-router-dom";
+import {Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom'
 import LoginPage from "./views/LoginPage/LoginPage";
-import { createBrowserHistory } from "history";
+import SignUp from "./views/singUpPage/singUp";
+import {createBrowserHistory} from "history";
 import "./assets/scss/material-kit-react.scss?v=1.10.0";
+
 var hist = createBrowserHistory();
-function App() {
-  return (
-    <div className="App">
-      <Router history={hist}>
-        <Switch>
-          <Route path='/' component={LoginPage} />
-        </Switch>
-      </Router>
-    </div>
-  );
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <div>
+                <Router history={hist}>
+                    <Switch>
+                        <Route path='/' component={LoginPage} exact/>
+
+                    </Switch>
+                    <Route path='/singUp' component={SignUp} exact/>
+                </Router>
+            </div>
+        );
+    }
+
 }
+
 
 export default App;

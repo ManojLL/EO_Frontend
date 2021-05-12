@@ -13,18 +13,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function Copyright() {
-  return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Your Website
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-  );
-}
+
+import styles from "assets/jss/material-kit-react/views/loginPage.js";
+
+import image from "assets/img/bg7.jpg";
+import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -50,68 +45,111 @@ export default function LoginPage() {
   const classes = useStyles();
 
   return (
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <form className={classes.form} noValidate>
-            <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="userName"
-                label="user name"
-                name="userName"
-                autoComplete="userName"
-                autoFocus
-            />
-            <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-            />
-            <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-            />
-            <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
-          </form>
+
+    <div>
+
+      <div
+        className={classes.pageHeader}
+        style={{
+          backgroundImage: "url(" + image + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+        }}
+      >
+        <div className={classes.container}>
+          <GridContainer justify="center">
+            <GridItem xs={12} sm={12} md={5}>
+              <Card className={classes[cardAnimaton]}>
+                <form className={classes.form}>
+                  <CardHeader color="primary" className={classes.cardHeader}>
+                    <h4>Login</h4>
+                    <div className={classes.socialLine}>
+                      <Button
+                        justIcon
+                        href="#pablo"
+                        target="_blank"
+                        color="transparent"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <i className={"fab fa-twitter"} />
+                      </Button>
+                      <Button
+                        justIcon
+                        href="#pablo"
+                        target="_blank"
+                        color="transparent"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <i className={"fab fa-facebook"} />
+                      </Button>
+                      <Button
+                        justIcon
+                        href="#pablo"
+                        target="_blank"
+                        color="transparent"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <i className={"fab fa-google-plus-g"} />
+                      </Button>
+                    </div>
+                  </CardHeader>
+
+
+                  <CardBody>
+                    <CustomInput
+                      labelText="User Name..."
+                      id="first"
+                      formControlProps={{
+                        fullWidth: true,
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+
+                    <CustomInput
+                      labelText="Password"
+                      id="pass"
+                      formControlProps={{
+                        fullWidth: true,
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off",
+                      }}
+                    />
+                    <Grid container justify="flex-end">
+                      <Grid item>
+                        <Link href="/singUp" variant="body2">
+                          Create an account? Sign Up
+                        </Link>
+                      </Grid>
+                    </Grid>
+                  </CardBody>
+                  <CardFooter className={classes.cardFooter}>
+                    <Button  color="primary" size="lg">
+                     login
+                    </Button>
+                  </CardFooter>
+                </form>
+              </Card>
+            </GridItem>
+          </GridContainer>
         </div>
-        <Box mt={8}>
-          <Copyright />
-        </Box>
-      </Container>
+      </div>
+    </div>
+
   );
 }
