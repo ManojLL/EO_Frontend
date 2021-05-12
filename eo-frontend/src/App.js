@@ -1,8 +1,8 @@
 import React from 'react'
 import { Router, Route, Switch } from "react-router-dom";
-import LoginPage from "./components/login/loginPAge";
+import LoginPage from "./views/LoginPage/LoginPage";
 import { createBrowserHistory } from "history";
-
+import "./assets/scss/material-kit-react.scss?v=1.10.0";
 var hist = createBrowserHistory();
 function App() {
   return (
