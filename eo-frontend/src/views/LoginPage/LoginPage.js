@@ -22,6 +22,8 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
+import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(styles);
 
@@ -34,13 +36,7 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
+
       <div
         className={classes.pageHeader}
         style={{
@@ -51,7 +47,7 @@ export default function LoginPage(props) {
       >
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={4}>
+            <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
@@ -86,10 +82,11 @@ export default function LoginPage(props) {
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+
+
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
+                      labelText="User Name..."
                       id="first"
                       formControlProps={{
                         fullWidth: true,
@@ -103,21 +100,7 @@ export default function LoginPage(props) {
                         ),
                       }}
                     />
-                    <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
+
                     <CustomInput
                       labelText="Password"
                       id="pass"
@@ -136,10 +119,17 @@ export default function LoginPage(props) {
                         autoComplete: "off",
                       }}
                     />
+                    <Grid container justify="flex-end">
+                      <Grid item>
+                        <Link href="/singUp" variant="body2">
+                          Create an account? Sign Up
+                        </Link>
+                      </Grid>
+                    </Grid>
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
-                      Get started
+                    <Button  color="primary" size="lg">
+                     login
                     </Button>
                   </CardFooter>
                 </form>
@@ -147,7 +137,6 @@ export default function LoginPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-        <Footer whiteFont />
       </div>
     </div>
   );
