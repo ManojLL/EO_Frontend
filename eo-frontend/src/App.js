@@ -5,6 +5,7 @@ import LoginPage from "./views/LoginPage/LoginPage";
 import SignUp from "./views/SingupPage/singUp";
 import {createBrowserHistory} from "history";
 import "./assets/scss/material-kit-react.scss?v=1.10.0";
+import LandingPage from "./views/LandingPage/LandingPage";
 
 var hist = createBrowserHistory();
 
@@ -23,6 +24,7 @@ class App extends React.Component {
 
                     </Switch>
                     <Route path='/singUp' component={SignUp} exact/>
+                    <Route path='/home' component={LandingPage} exact/>
                 </Router>
             </div>
         );

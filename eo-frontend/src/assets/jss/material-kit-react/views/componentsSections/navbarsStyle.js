@@ -3,7 +3,7 @@ import headerLinksStyle from "assets/jss/material-kit-react/components/headerLin
 
 const navbarsStyle = (theme) => ({
   section: {
-    padding: "70px 0",
+
     paddingTop: "0",
   },
   container,
@@ -26,7 +26,7 @@ const navbarsStyle = (theme) => ({
     backgroundPosition: "center center",
     backgroundSize: "cover",
     marginTop: "0",
-    minHeight: "740px",
+
   },
   formControl: {
     margin: "0 !important",
