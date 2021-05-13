@@ -20,6 +20,11 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 
 import SectionNavbars from "../Components/Sections/SectionNavbars";
+import SectionCarousel from "../Components/Sections/SectionCarousel";
+import CustomTabs from "../../components/CustomTabs/CustomTabs";
+import Face from "@material-ui/icons/Face";
+import Chat from "@material-ui/icons/Chat";
+import Build from "@material-ui/icons/Build";
 
 const dashboardRoutes = [];
 
@@ -31,6 +36,7 @@ export default function LandingPage(props) {
   return (
     <div>
       <SectionNavbars/>
+      <SectionCarousel />
       <Footer />
     </div>
   );
