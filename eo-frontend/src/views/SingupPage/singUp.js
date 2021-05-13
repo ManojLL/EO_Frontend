@@ -4,9 +4,12 @@ import {makeStyles} from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
+import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
 // core components
-
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -44,7 +47,7 @@ export default function SingUp(props) {
             >
                 <div className={classes.container}>
                     <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={5}>
+                        <GridItem xs={12} sm={12} md={6}>
                             <Card className={classes[cardAnimaton]}>
                                 <form className={classes.form}>
                                     <CardHeader color="primary" className={classes.cardHeader}>
@@ -79,8 +82,7 @@ export default function SingUp(props) {
                                             </Button>
                                         </div>
                                     </CardHeader>
-
-
+                                    {/*<p className={classes.divider}>Or Be Classical</p>*/}
                                     <CardBody>
                                         <CustomInput
                                             labelText="User Name..."
@@ -97,9 +99,8 @@ export default function SingUp(props) {
                                                 ),
                                             }}
                                         />
-
                                         <CustomInput
-                                            labelText="Email"
+                                            labelText="Email..."
                                             id="email"
                                             formControlProps={{
                                                 fullWidth: true,
@@ -108,12 +109,9 @@ export default function SingUp(props) {
                                                 type: "email",
                                                 endAdornment: (
                                                     <InputAdornment position="end">
-                                                        <Icon className={classes.inputIconsColor}>
-                                                            email
-                                                        </Icon>
+                                                        <Email className={classes.inputIconsColor}/>
                                                     </InputAdornment>
                                                 ),
-                                                autoComplete: "off",
                                             }}
                                         />
                                         <CustomInput
@@ -137,7 +135,7 @@ export default function SingUp(props) {
 
                                         <CustomInput
                                             labelText="Confirm Password"
-                                            id="passCom"
+                                            id="passCon"
                                             formControlProps={{
                                                 fullWidth: true,
                                             }}
@@ -153,24 +151,22 @@ export default function SingUp(props) {
                                                 autoComplete: "off",
                                             }}
                                         />
-                                        <Grid container justify="flex-end">
-                                            <Grid item>
-                                                <Link href="/" variant="body2">
-                                                    Already have an account? Sing In
-                                                </Link>
-                                            </Grid>
+                                        <Grid item>
+                                            <Link href="/" variant="body2">
+                                                {"Already have an account? Sign In"}
+                                            </Link>
                                         </Grid>
                                     </CardBody>
                                     <CardFooter className={classes.cardFooter}>
-                                        <Button color="primary" size="lg">
-                                            Sing up
-                                        </Button>
+                                        <Button  color="primary" size="lg">
+                                            sing up                                        </Button>
                                     </CardFooter>
                                 </form>
                             </Card>
                         </GridItem>
                     </GridContainer>
                 </div>
+
             </div>
         </div>
     );

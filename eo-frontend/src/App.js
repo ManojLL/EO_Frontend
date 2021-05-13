@@ -2,7 +2,7 @@ import React from 'react'
 import {Switch, Route} from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom'
 import LoginPage from "./views/LoginPage/LoginPage";
-import SignUp from "./views/singUpPage/singUp";
+import SignUp from "./views/SingupPage/singUp";
 import {createBrowserHistory} from "history";
 import "./assets/scss/material-kit-react.scss?v=1.10.0";
 
