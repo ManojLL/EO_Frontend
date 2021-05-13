@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5ff9a96-c1bc-41c3-972d-661800eff051" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/singUpPage/singUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/singUpPage/singUp.js" afterDir="false" />
-    </list>
+    <list default="true" id="e5ff9a96-c1bc-41c3-972d-661800eff051" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +74,7 @@
       <updated>1620793007465</updated>
       <workItem from="1620793010030" duration="10192000" />
       <workItem from="1620837790130" duration="9881000" />
+      <workItem from="1620854140472" duration="1569000" />
     </task>
     <servers />
   </component>
