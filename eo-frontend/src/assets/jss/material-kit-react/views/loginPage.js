@@ -5,9 +5,9 @@ const signupPageStyle = {
     ...container,
     zIndex: "2",
     position: "relative",
-    paddingTop: "20vh",
-    color: "#e8e3e3",
-    paddingBottom: "200px",
+    paddingTop: "13vh",
+    color: "#FFFFFF",
+
   },
   cardHidden: {
     opacity: "0",
@@ -23,7 +23,7 @@ const signupPageStyle = {
     border: "0",
     alignItems: "center",
     "&:before": {
-      background: "#f0efef",
+      background: "rgba(0, 0, 0, 0.5)",
     },
     "&:before,&:after": {
       position: "absolute",
